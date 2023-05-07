@@ -108,4 +108,51 @@ function getWeather (city) {
     forecast(data);
   });
 };
+var cityArray=[]
+//Event listener so when the search button is clicked, user input triggers fetch request
+searchButton.addEventListener("click", function(event){
+  getWeather(searchName.value); //calling above function to get weather 
+  var cityArray=JSON.parse(localStorage.getItem("cityArray"))
+  if (!cityArray) {
+    cityArray=[]
+  }
+  var names=searchName.value
+  cityArray.push(names)
+  localStorage.setItem("cityArray", JSON.stringify(cityArray));
+  getStorage() //get stroage function called below, updates UI to dispaly saved city search history
+
+});
+
+function getStorage() {
+
+  var savedCities = JSON.parse(localStorage.getItem("cityArray"));
+
+  if (!savedCities) {
+    savedCities=[]
+}
+
+//clear previously displayed saved cities from UI then loops saved cities for new saved cities to add to UI to display to search history with appended button so user can click on previous city search 
+buttonList.innerHTML="";
+
+
+  for (var i = 0; i< savedCities.length; i++) {
+
+  var savedCity= document.createElement("button");
+  savedCity.setAttribute("class", "savedCities");
+  savedCity.textContent = savedCities[i];
+  buttonList.appendChild(savedCity)
+    }
+
+};
+
+buttonList.addEventListener("click", function(event){
+event.target
+console.log(event.target)
+if (event.target.matches(".savedCities")) {
+getWeather(event.target.textContent);
+console.log(event.target.textContent)
+}
+})
+
+
 

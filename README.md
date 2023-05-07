@@ -6,8 +6,8 @@ This is weather forcaster app, take home task built from scratch. The user is a 
 ### Technologiees 
 This app uses Server-Side-APIs and Bootstrap. 
 
-[OpenWeather API](https://openweathermap.org/api)
-[Bootsrap](https://getbootstrap.com/)
+*[OpenWeather API](https://openweathermap.org/api)
+*[Bootsrap](https://getbootstrap.com/)
 
 #### Installation 
 1. Navigate to the repository
