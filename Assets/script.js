@@ -152,7 +152,7 @@ if (event.target.matches(".savedCities")) {
 getWeather(event.target.textContent);
 console.log(event.target.textContent)
 }
-})
+});
 
 
 
