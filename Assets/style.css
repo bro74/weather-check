@@ -1,0 +1,25 @@
+header {
+    background-color: #f4a994;
+    background-image: linear-gradient(315deg, hsl(254, 58%, 84%) 0%, #f3b0df 74%);
+
+}
+
+.card {
+    background-color: #f0dab3;
+    background-image: linear-gradient(315deg, hsl(254, 58%, 84%) 0%, #f0dab3 52%);
+    
+}
+
+.savedCities {
+    background-color: #f3b0df;
+    border-radius: 50px;
+    height: 50px;
+    margin-left: -2%;
+    text-align: center;
+    width: 50%;
+}
+
+.savedCities:hover {
+    background-color: #f4a994;
+
+}
